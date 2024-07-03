@@ -53,16 +53,17 @@ export default function SignIn() {
             </span>
             Hub
           </Link>
-          <p className="text-sm mt-5">
-            This is a demo project.You can sign in with your email and password
-            or with google.
-          </p>
+          <div className="mt-5">
+            <h1 className="text-xl">Welcome To PublishHub.</h1>
+            <p className="text-sm mt-2">
+              You can sign in with your email and password or with Google.
+            </p>
+          </div>
         </div>
 
         {/*Right side */}
         <div className="flex-1">
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-
             <div>
               <Label value="Your email" />
               <TextInput
@@ -97,7 +98,7 @@ export default function SignIn() {
                 "Sign In"
               )}
             </Button>
-            <OAuth/>
+            <OAuth />
           </form>
 
           {/*Already have an account login */}
@@ -117,3 +118,4 @@ export default function SignIn() {
     </div>
   );
 }
+
