@@ -108,6 +108,7 @@ export default function PostPage() {
 
   useEffect(() => {
     const fetchPost = async () => {
+
       try {
         setLoading(true);
         const res = await fetch(`/api/post/getposts?slug=${postSlug}`);
@@ -121,6 +122,10 @@ export default function PostPage() {
           setPost(data.posts[0]);
           setLoading(false);
           setError(false);
+
+          setSummary(null);
+          setTranslatedText("");
+          setAudioSrc(null);
         }
       } catch (error) {
         setError(true);
@@ -420,3 +425,4 @@ export default function PostPage() {
     </main>
   );
 }
+
